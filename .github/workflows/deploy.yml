@@ -32,10 +32,12 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        # 關鍵修復：刪除損毀的 package-lock.json 並以 --no-package-lock 全新安裝，解決 edgesOut 報錯
+        run: |
+          rm -f package-lock.json
+          npm install --no-package-lock --legacy-peer-deps
 
       - name: Build with relative base
-        # 強制相對路徑，徹底解決 GitHub Pages 404 全白問題
         run: npx vite build --base="./"
 
       - name: Setup Pages
