@@ -1,0 +1,8 @@
+{
+  "name": "TPU 塑膠原料拉伸不足客訴改善與智慧化管理平台",
+  "description": "TPU塑膠原料拉伸不足客訴數位化登錄、工藝參數核對、COA留樣比對、AI成因分析與多方責任簽核平台",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
